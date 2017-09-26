@@ -1,15 +1,23 @@
 ﻿app.controller("showBushelsController", ["$http", "$scope", function ($http, $scope) {
     $scope.bushels = [];
 
-//    $http.delete("/api/Bushels/id")
-//        .then(function (result) {
-//            $scope.bushels = result.data;
-//        });
-    $http.get("/api/Bushels")
+
+    $scope.showBushels = () => {
+        $http.get("/api/Bushels")
         .then(function (result) {
             $scope.bushels = result.data;
         });
+    }
 
+    $scope.showBushels();
+
+    $scope.stealApples = (id) => {
+        $http.delete(`/api/Bushels/${id}`)
+        .then(function (result) {
+            console.log(result);
+            $scope.showBushels();
+        });
+    }
 
 //    $scope.showBushels = function () {
 //        var bushels = $scope.bushels
