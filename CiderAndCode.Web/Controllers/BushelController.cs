@@ -15,9 +15,10 @@ namespace CiderAndCode.Web.Controllers
         {
             var db = new AppDbContext();
 
-            var bushels = db.Bushels
+            var bushels = db.Bushels.Where(bushel => bushel.Pressed == false)
                 .Select(bushel => new AppleResult
                 {
+                    Id = bushel.Id, 
                     NumberOfBushels = bushel.Quantity,
                     TypeOfApple = bushel.Type.ToString(),
                     ContributingUser = bushel.User.Name

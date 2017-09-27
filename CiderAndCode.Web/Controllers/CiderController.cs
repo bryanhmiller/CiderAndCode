@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using CiderAndCode.Web.DataModels;
+using CiderAndCode.Web.ViewModels;
 
 namespace CiderAndCode.Web.Controllers
 {
@@ -53,6 +54,23 @@ namespace CiderAndCode.Web.Controllers
 
             return Request.CreateResponse(HttpStatusCode.Created, newCider);
         }
+
+        [HttpGet, Route("")]
+        public HttpResponseMessage GetAllCiders()
+        {
+            var db = new AppDbContext();
+
+            var ciders = db.Ciders
+                .Select(cider => new CiderResult
+                {
+                    NumberOfGallons = cider.NumberOfGallons,
+                    TypeOfApple = cider.Type.ToString(),
+                    DatePressed = cider.DatePressed
+                });
+
+            return Request.CreateResponse(HttpStatusCode.OK, ciders);
+        }
+
     }
 
     public class MakeCiderRequest

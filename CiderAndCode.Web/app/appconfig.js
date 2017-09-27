@@ -9,5 +9,15 @@
         {
             templateUrl: "/app/views/showBushels/showBushels.html",
             controller: "showBushelsController"
+        })
+        .when("/makecider",
+        {
+            templateUrl: "/app/views/makeCider/makeCider.html",
+            controller: "makeCiderController"
+        })
+        .when("/showciders",
+        {
+            templateUrl: "/app/views/showCiders/showCiders.html",
+            controller: "showCidersController"
         });
 }]);

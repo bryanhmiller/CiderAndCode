@@ -14,25 +14,7 @@
     $scope.stealApples = (id) => {
         $http.delete(`/api/Bushels/${id}`)
         .then(function (result) {
-            console.log(result);
             $scope.showBushels();
         });
     }
-
-//    $scope.showBushels = function () {
-//        var bushels = $scope.bushels
-//        $http.get("/api/Bushels", {
-//            Type: bushel.appleType,
-//            NumberOfBushels: bushel.numberOfBushels,
-//            UserId: bushel.userId
-//        })
-//            .then(function (result) {
-//                console.log(result)
-//            })
-//            .catch(function (error) {
-//                console.log(error);
-//            });
-//        };
-
-
 }]);
