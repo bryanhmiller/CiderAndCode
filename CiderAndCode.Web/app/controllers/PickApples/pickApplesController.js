@@ -1,4 +1,4 @@
-﻿app.controller("pickApplesController",["$http","$scope",function($http, $scope) {
+﻿app.controller("pickApplesController",["$http","$location", "$scope",function($http, $location, $scope) {
     $scope.bushel = {};
     $scope.users = [];
 
@@ -16,7 +16,8 @@
             UserId: bushel.userId
         })
         .then(function (result) {
-            console.log(result)
+            console.log(result);
+            $location.url("/showbushels");
         })
         .catch(function (error) {
             console.log(error);    

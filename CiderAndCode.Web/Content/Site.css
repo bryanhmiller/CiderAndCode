@@ -1,5 +1,5 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 20px;
 }
 
@@ -14,4 +14,52 @@ input,
 select,""
 textarea {
     max-width: 280px;
+}
+
+html {
+    background-image: url("http://www.foodrepublic.com/wp-content/uploads/2013/09/glamorous-assorted-apples-pictures-hd-wallpaper-hd-pictures.jpg");
+    object-fit: cover;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0 15px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #999999;
+    padding: 15px;
+}
+
+.populated {
+    background-color: white;
+    margin-top: 10px;
+}
+
+.report {
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.panel-body {
+    border-radius: 5px;
+}
+
+.stickme {
+    background-color: white;
+    text-align: center;
+    height: 40px;
+    width: 500px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-bottom: 10px;
+    margin-left: -250px;
+    border-radius: 5px;
+}
+
+.btn {
+    min-height: 20px;
+    border-radius: 3px;
 }

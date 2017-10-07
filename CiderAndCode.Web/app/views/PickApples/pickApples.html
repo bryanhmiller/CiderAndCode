@@ -1,16 +1,19 @@
-﻿<label for="appleType">Type of Apples</label>
-<select id="appleType" type="number" ng-model="bushel.appleType">
-    <option value="0">CrabApple</option>
-    <option value="1">Macintosh</option>
-    <option value="2">GoldenDelicious</option>
-    <option value="3">GrannySmith</option>
-    <option value="4">Opal</option>
-    <option value="5">PinkLady</option>
-    <option value="6">HoneyCrisp</option>
-</select>
-<label for="numberOfBushels">Number of Bushels</label>
-<input id="numberOfBushels" type="number" ng-model="bushel.numberOfBushels" />
-<select id="userId" typeof="number" ng-model="bushel.userId">
+﻿<div class="populated panel-body col-lg-12">
+    <label class="col-md-1" for="appleType">Type of Apples</label>
+    <select class="col-md-2" id="appleType" type="number" ng-model="bushel.appleType">
+        <option value="0">CrabApple</option>
+        <option value="1">Macintosh</option>
+        <option value="2">GoldenDelicious</option>
+        <option value="3">GrannySmith</option>
+        <option value="4">Opal</option>
+        <option value="5">PinkLady</option>
+        <option value="6">HoneyCrisp</option>
+    </select>
+    <label class="col-md-2 " for="numberOfBushels">Number of Bushels</label>
+    <input class="col-md-1" id="numberOfBushels" type="number" ng-model="bushel.numberOfBushels" />
+    <label class="col-md-1">Select User</label> 
+    <select class="col-md-2" id="userId" typeof="number" ng-model="bushel.userId">
         <option ng-repeat="user in users" value="{{user.Id}}">{{user.Name}}</option>
-</select> 
-<button ng-click="pickApples()">Pick Them Apples</button>
+    </select>
+    <button class="btn btn-success col-md-2 col-md-offset-1" ng-click="pickApples()">Pick Them Apples</button>
+</div>

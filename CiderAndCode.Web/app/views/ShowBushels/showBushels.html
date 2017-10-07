@@ -1,3 +1,6 @@
 ﻿<div ng-model="bushels">
-    <div ng-repeat="bushel in bushels">{{bushel.NumberOfBushels}} bushels of {{bushel.TypeOfApple}} apples were picked by {{bushel.ContributingUser}}. <button ng-click="stealApples(bushel.Id)">Steal Bushels</button></div>
+    <div class="populated panel-body col-md-12" ng-repeat="bushel in bushels">
+        <p class="col-md-10">{{bushel.NumberOfBushels}} bushels of {{bushel.TypeOfApple}} apples were picked by {{bushel.ContributingUser}}.</p>
+        <button class=" btn btn-danger col-md-2" ng-click="stealApples(bushel.Id)">Steal Bushels</button>
+    </div>
 </div>
