@@ -156,6 +156,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BushelController.cs" />
+    <Compile Include="Controllers\BushelsController.cs" />
     <Compile Include="Controllers\CiderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PickApplesController.cs" />
@@ -240,9 +241,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Bushels\Create.cshtml" />
+    <Content Include="Views\Bushels\Delete.cshtml" />
+    <Content Include="Views\Bushels\Details.cshtml" />
+    <Content Include="Views\Bushels\Edit.cshtml" />
+    <Content Include="Views\Bushels\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Bushel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

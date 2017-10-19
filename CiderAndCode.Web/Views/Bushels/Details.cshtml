@@ -1,0 +1,50 @@
+﻿@model CiderAndCode.Web.DataModels.Bushel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Bushel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ripe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ripe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pressed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pressed)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

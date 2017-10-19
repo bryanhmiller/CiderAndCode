@@ -20,5 +20,5 @@
             templateUrl: "/app/views/showCiders/showCiders.html",
             controller: "showCidersController"
         })
-        .otherwise("/pickapples");
+        .otherwise("/pickapples")
 }]);
